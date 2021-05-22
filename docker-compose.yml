@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  react-expo:
+    container_name: react-native
+    image: jungseoro/react-native
+    volumes:
+    - ../:/vol
+    command: |
+      sh -c 'adb pair "${DEVICE_IP}":"${PAIR_PORT}" "${PAIR_CODE}" \
+      && adb connect "${DEVICE_IP}":"${DEVICE_PORT}" \
+      && cd /vol \
+      && npx react-native start'
