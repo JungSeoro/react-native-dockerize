@@ -10,8 +10,7 @@ or
 ``` 
 and modify `services name` in `docker-compose.yml`
 ## 2. Fill in `.env`  
-This docker supports device debugging.  
-Therefore, you need an adb pair on the same wifi over Android OS 11.  
+This docker supports device debugging, so you need an adb pair on the same wifi over Android OS 11.  
 Please refer to [Android Developers](https://developer.android.com/studio/command-line/adb?hl=ko#connect-to-a-device-over-wi-fi-android-11+) for details.  
 ## 3. Start metro bundler  
 ```
