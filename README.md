@@ -22,4 +22,5 @@ If the app is not installed on the device, build it with the command below, othe
 ```
 ## Reference  
 * [React Native Document](https://reactnative.dev/docs/environment-setup)
+* [React Native Community](https://github.com/react-native-community/docker-android)
 * [ADB Document](https://developer.android.com/studio/command-line/adb?hl=ko)
