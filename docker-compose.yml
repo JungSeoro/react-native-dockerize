@@ -9,4 +9,5 @@ services:
       sh -c 'adb pair "${DEVICE_IP}":"${PAIR_PORT}" "${PAIR_CODE}" \
       && adb connect "${DEVICE_IP}":"${DEVICE_PORT}" \
       && cd /vol \
+      && npm install \
       && npx react-native start'
