@@ -3,6 +3,8 @@ services:
   react-expo:
     container_name: react-native
     image: jungseoro/react-native
+    stdin_open: true
+    tty: true   
     volumes:
     - ../:/vol
     command: |
