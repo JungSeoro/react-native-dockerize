@@ -9,7 +9,7 @@ or
 > docker build . -t <image name> 
 ``` 
 and modify `services name` in `docker-compose.yml`
-## (Optional)1. Init react native project on docker
+## 1. Init react native project on docker (Optional)  
 If react-native project does not exist, make it with command below and mv repo in the project.
 ```
 > docker run -it --rm -v <PROJECT_DIR>:/vol jungseoro/react-native sh -c "cd /vol && npx react-native init <PROJECT_NAME>"
