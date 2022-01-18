@@ -16,7 +16,7 @@ If expo project does not exist, make it with command below and mv repo in the pr
 > mv react-native-dockerize <PROJECT_DIR>/<PROJECT_NAME>/
 ```
 ## 2. Fill in `.env`  
-This docker supports device debugging, so you need expo account and app. 
+This docker supports device debugging, so you need expo account and app.  
 Please refer to [expo for android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www) or [expo for ios](https://apps.apple.com/app/apple-store/id982107779) for details.  
 ## 3. Run project  
 ```
