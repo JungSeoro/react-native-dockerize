@@ -9,7 +9,7 @@ or
 > docker build . -t <image name> 
 ``` 
 and modify `services name` in `docker-compose.yml`
-## 1. Init react native project on docker (Optional)
+## 1. Init expo project on docker (Optional)
 If expo project does not exist, make it with command below and mv repo in the project.
 ```
 > docker run -it --rm -v <PROJECT_DIR>:/vol jungseoro/react-expo sh -c "cd /vol && expo init <PROJECT_NAME>"
