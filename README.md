@@ -1,6 +1,6 @@
 # React Native Dockerize
-Setting up the development environment using docker.  
-## 1. Docker build  
+Setting up the development environment using docker.    
+## 0. Set up docker image  
 ```
 > docker pull jungseoro/react-native 
 ```  
@@ -9,6 +9,12 @@ or
 > docker build . -t <image name> 
 ``` 
 and modify `services name` in `docker-compose.yml`
+## (Optional)1. Init react native project on docker
+If react-native project does not exist, make it with command below and mv repo in the project.
+```
+> docker run -it --rm -v <PROJECT_DIR>:/vol jungseoro/react-native sh -c "cd /vol && npx react-native init <PROJECT_NAME>"
+> mv react-native-dockerize <PROJECT_DIR>/<PROJECT_NAME>/
+```
 ## 2. Fill in `.env`  
 This docker supports device debugging, so you need an adb pair on the same wifi over Android OS 11.  
 Please refer to [Android Developers](https://developer.android.com/studio/command-line/adb?hl=ko#connect-to-a-device-over-wi-fi-android-11+) for details.  
@@ -17,7 +23,7 @@ Please refer to [Android Developers](https://developer.android.com/studio/comman
 ```
 > docker-compose up
 ```  
-If the app is not installed on the device, build it with the command below, otherwise run the app.
+If the app is not installed on the device, build it with command below, otherwise run the app.
 ```
 > docker exec -it react-native sh -c "cd /vol && npx react-native run-android"
 ```
