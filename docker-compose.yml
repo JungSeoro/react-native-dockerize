@@ -1,8 +1,8 @@
 version: '3.5'
 services:
-  react-expo:
+  react-native:
     container_name: react-native
-    image: jungseoro/react-native
+    image: jungseoro/react-native:node18-java11
     stdin_open: true
     tty: true   
     volumes:
@@ -12,4 +12,5 @@ services:
       && adb connect "${DEVICE_IP}":"${DEVICE_PORT}" \
       && cd /vol \
       && npm install \
-      && npx react-native start --reset-cache'
+      && tail -f /dev/null'
+      #&& npx react-native start --reset-cache'
